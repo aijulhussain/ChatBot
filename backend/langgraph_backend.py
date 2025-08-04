@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGroq(model="llama-3.1-70b-chat")
+llm = ChatGroq(model="llama-3.1-8b-instant")
 
 class ChatState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
