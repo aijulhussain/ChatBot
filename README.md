@@ -36,6 +36,6 @@ git clone https://github.com/aijulhussain/ChatBot.git
 
 python -m venv venv
 On Windows: venv\Scripts\activate
-Create a .env file and add your keys (e.g., OpenAI, Groq):
+Create a .env file and add your keys (Groq):
 streamlit run frontend/app.py
 
