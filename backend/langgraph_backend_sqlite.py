@@ -34,10 +34,17 @@ graph.add_edge("chat_node", END)
 chatbot = graph.compile(checkpointer=checkpointer)
 
 
-CONFIG= {'configurable': {'thread_id': 'thread-1'}}
+# CONFIG= {'configurable': {'thread_id': 'thread-1'}}
 
-response = chatbot.invoke(
-                {'messages': [HumanMessage(content='Hello, what is my name?')]},
-                config= CONFIG,
-            )
-print(response)
+# response = chatbot.invoke(
+#                 {'messages': [HumanMessage(content='Hello, what is my name?')]},
+#                 config= CONFIG,
+#             )
+# print(response)
+
+def retrieve_all_treads():
+    all_threads=set()
+    for checkpoint in checkpointer.list(None):
+        all_threads.add(checkpoint.config['configurable']['thread_id'])
+
+        return list(all_threads)
