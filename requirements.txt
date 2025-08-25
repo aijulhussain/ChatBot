@@ -6,3 +6,5 @@ typing
 langchain_core
 streamlit
 langchain_community
+arxiv
+duckduckgo-search

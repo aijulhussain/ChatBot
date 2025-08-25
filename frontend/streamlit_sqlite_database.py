@@ -1,12 +1,10 @@
 import os
 import sys
-
-
-
 # Add parent directory (chatbot/) to sys.path so "backend" becomes importable
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import streamlit as st
-from backend.langgraph_backend_sqlite import chatbot, retrieve_all_threads
+from backend.langgraph_tools import chatbot, retrieve_all_threads
 from langchain_core.messages import HumanMessage
 import uuid
 
